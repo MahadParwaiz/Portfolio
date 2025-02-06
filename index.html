@@ -5,79 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mahad Parwaiz - Virtual Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    header { background: #333; color: #fff; padding: 1rem 2rem; }
-    header h1 { margin: 0; }
-    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
-    nav ul li a { color: #fff; text-decoration: none; }
-    section { padding: 2rem; }
-    section h2 { border-bottom: 2px solid #ccc; padding-bottom: 0.5rem; }
-    footer { background: #f4f4f4; text-align: center; padding: 1rem; }
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    header h1 {
+      margin: 0;
+    }
+    header p {
+      margin: 0.5rem 0 1rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ddd;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 2rem 0;
+      border-bottom: 1px solid #e0e0e0;
+      overflow: auto;
+    }
+    section h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    section ul {
+      list-style: none;
+      padding: 0;
+    }
+    section ul li {
+      margin-bottom: 1rem;
+    }
+
+    /* Profile Image Styles */
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+      float: left;
+      border: 3px solid #333;
+    }
+
+    /* Footer Styles */
+    footer {
+      background: #f4f4f4;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .profile-img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- Header with name and navigation -->
   <header>
-    <h1>Mahad Parwaiz</h1>
-    <p>[ML developer, Uplyft | MEng student of Computational Bioengineering, Imperial College | Year in industry at Quick Release, Aston martin, Ford, Mclaren]</p>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Mahad Parwaiz</h1>
+      <p>ML Developer, Uplyft | MEng student of Computational Bioengineering, Imperial College | Year in industry at Quick Release, Aston Martin, Ford, McLaren</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      <!-- Paste your LinkedIn summary or introduction here -->
-      [Your LinkedIn summary or professional introduction goes here.]
-    </p>
+    <div class="container">
+      <h2>About Me</h2>
+      <img src="assets/images/profile.jpg" alt="Mahad Parwaiz" class="profile-img">
+      <p>
+        [Your LinkedIn summary or professional introduction goes here.]
+      </p>
+    </div>
   </section>
 
   <!-- Experience Section -->
   <section id="experience">
-    <h2>Professional Experience</h2>
-    <ul>
-      <!-- For each role from your LinkedIn, list details -->
-      <li>
-        <h3>[Job Title] at [Company]</h3>
-        <p>[A brief description of your role, responsibilities, and achievements.]</p>
-      </li>
-      <!-- Repeat for additional roles -->
-    </ul>
+    <div class="container">
+      <h2>Professional Experience</h2>
+      <ul>
+        <li>
+          <h3>[Job Title] at [Company]</h3>
+          <p>[A brief description of your role, responsibilities, and achievements.]</p>
+        </li>
+        <!-- Repeat for additional roles -->
+      </ul>
+    </div>
   </section>
 
-  <!-- Projects or Skills Section -->
+  <!-- Projects Section -->
   <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <h3>[Project Title]</h3>
-        <p>[Brief description of the project, your role, and the technologies used.]</p>
-      </li>
-      <!-- Add more projects as needed -->
-    </ul>
+    <div class="container">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <h3>[Project Title]</h3>
+          <p>[Brief description of the project, your role, and the technologies used.]</p>
+        </li>
+        <!-- Add more projects as needed -->
+      </ul>
+    </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: [Your Email Address]</p>
-    <p>
-      LinkedIn: <a href="https://www.linkedin.com/in/mahad-parwaiz-6b6677214/" target="_blank">
-      View my LinkedIn</a>
-    </p>
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: [Your Email Address]</p>
+      <p>
+        LinkedIn: <a href="https://www.linkedin.com/in/mahad-parwaiz-6b6677214/" target="_blank">View my LinkedIn</a>
+      </p>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Mahad Parwaiz. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Mahad Parwaiz. All rights reserved.</p>
+    </div>
   </footer>
 
 </body>
